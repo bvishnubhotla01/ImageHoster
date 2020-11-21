@@ -10,15 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-public class HomeController {
+public class ImageController {
 
     @Autowired
     private ImageService imageService;
 
-    @RequestMapping("/")
-    public String getAllImages(Model model) {
+    //This method displays all the images in the user home page after successful login
+    @RequestMapping("/images")
+    public String getUserImages(Model model) {
+        //Complete the method
+        //Get all the hard-coded images in the application using getAllImages() method in ImageService class and add them to the model with 'images' as the key
         List<Image> images = imageService.getAllImages();
         model.addAttribute("images", images);
-        return "index";
+        return "images";
     }
 }

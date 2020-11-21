@@ -1,22 +1,14 @@
 package ImageHoster.model;
+
 import java.util.Date;
 
 public class Image {
 
-    //id of the image
     private Integer id;
-
-    //The image in Base64 format
-    private String imageFile;
-
-    //Description of the image
-    private String description;
-
-    //Date on which the image is posted
-    private Date date;
-
-    //title of the image
     private String title;
+    private String imageFile;
+    private String description;
+    private Date date;
 
     public Image(Integer id, String title, String imageFile, Date date) {
         this.id = id;
@@ -64,5 +56,4 @@ public class Image {
     public void setDate(Date date) {
         this.date = date;
     }
-
 }
